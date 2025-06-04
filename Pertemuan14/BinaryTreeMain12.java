@@ -12,6 +12,15 @@ public class BinaryTreeMain12 {
         System.out.println("\nDaftar semua mahasiswa (in order traversal): ");
         bst.traverseInOrder(bst.root);
 
+        System.out.println("\nMahasiswa dengan IPK MIN:");
+        bst.cariMinIPK().tampilInformasi();
+
+        System.out.println("\nMahasiswa dengan IPK MAX:");
+        bst.cariMaxIPK().tampilInformasi();
+
+        System.out.println("\nMahasiswa dengan IPK di atas 3.5:");
+        bst.tampilMahasiswaIPKdiAtas(3.5);
+
         System.out.println("\nPencarian data mahasiswa:");
         System.out.println("Cari mahasiswa dengan IPK 3.54:");
         String hasilCari1 = bst.find(3.54) ? "Ditemukan" : "Tidak ditemukan";

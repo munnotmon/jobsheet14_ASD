@@ -22,4 +22,20 @@ public class BinaryTreeArray12 {
             }
         }
     }
+
+    public void add(Mahasiswa12 data) {
+        if (idxLast >= dataMahasiswa.length - 1) {
+            System.out.println("Tree sudah penuh");
+            return;
+        }
+        dataMahasiswa[++idxLast] = data;
+    }
+
+    public void traversePreOrder(int idxStart) {
+        if (idxStart <= idxLast && dataMahasiswa[idxStart] != null) {
+            dataMahasiswa[idxStart].tampilInformasi();
+            traversePreOrder(2 * idxStart + 1);
+            traversePreOrder(2 * idxStart + 2);
+        }
+    }    
 }
